@@ -1,0 +1,144 @@
+.container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+header{
+    max-width: inherit;
+    width: inherit;
+    position: fixed;
+    background-color: white;
+    padding: 50px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 10px 15px 10px black inset;
+    z-index: 1;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ul{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+li{
+    transition: all;
+}
+li:hover{
+    background-color: chartreuse;
+}
+
+.section1{
+    width: 100%;
+}
+.box1{
+    width: 200px;
+    height: 200px;
+    margin: 220px;
+    background-color: blue;
+    box-shadow: 10px 15px red;
+    /* transition-property: all;
+    transition-duration: 2s; */
+    transition: all 2s;
+}
+.box1:hover{
+    transform: scale(2);
+    box-shadow: 10px 15px 5px red;
+}
+
+.box2{
+    width: 200px;
+    height: 200px;
+    margin: 25px auto;
+    background-color: yellow;
+    border-radius: 50%;
+    animation-name: circle;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes circle{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.lorem{
+    font-size: 20px;
+    animation-name: sizedown;
+    animation-duration: 10s;
+    margin: 25px auto;
+}
+@keyframes sizedown{
+    from{
+        font-size: 20px;
+    }
+    to{
+        font-size: 10px;
+    }
+}
+
+.compact_disc{
+    width: 200px;
+    height: 200px;
+    margin: 25px auto;
+    border-radius: 50%;
+    animation-name: Disc;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes Disc{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.section2{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+.box3{
+    width: 0px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50px;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    animation-name: red;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+@keyframes red{
+    0%{
+        width: 70px;
+        background-color: red;
+        opacity: 0;
+    }
+    100%{
+        width: 1000px;
+        background-color: red;
+        opacity: 1;
+    }
+}
+.box4{
+    width: 1000px;
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
