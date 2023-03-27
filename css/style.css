@@ -26,7 +26,7 @@ ul{
     justify-content: space-between;
 }
 li{
-    transition: all;
+    transition: all .5s linear;
 }
 li:hover{
     background-color: chartreuse;
@@ -72,7 +72,7 @@ li:hover{
     font-size: 20px;
     animation-name: sizedown;
     animation-duration: 10s;
-    margin: 25px auto;
+    /* margin: 25px auto; */
 }
 @keyframes sizedown{
     from{
@@ -86,11 +86,12 @@ li:hover{
 .compact_disc{
     width: 200px;
     height: 200px;
-    margin: 25px auto;
+    margin: 50px auto 50px auto;
     border-radius: 50%;
     animation-name: Disc;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 @keyframes Disc{
     0%{
@@ -117,16 +118,15 @@ li:hover{
     animation-name: red;
     animation-duration: 5s;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 @keyframes red{
     0%{
         width: 70px;
-        background-color: red;
         opacity: 0;
     }
     100%{
         width: 1000px;
-        background-color: red;
         opacity: 1;
     }
 }
